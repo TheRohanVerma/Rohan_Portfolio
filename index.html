@@ -5,18 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
-
+         
         <!-- =====BOX ICONS===== -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
+        <title>Rohan Verma</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Rohan</a>
+                    <a href="#" class="nav__logo">Rohan Verma</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -25,6 +26,8 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -39,19 +42,20 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Rohan</span><br> Data Scientist</h1>
+                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Rohan</span></h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="mailto: rverma3@ualberta.ca" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/therohanverma/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <!-- <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>-->
                     <a href="https://github.com/TheRohanVerma" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.instagram.com/the.rohan.verma/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+
                 </div>
 
                 <div class="home__img">    
-                    <img src="assets/img/perfil.png" alt="">
+                    <img src="assets/img/main.png" alt="">
                 </div>
             </section>
 
@@ -65,130 +69,279 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">I'am Rohan Verma</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                        
+                        <p class="about__text"> I am an M.Sc CS student at University of Alberta. I completed my B.Tech. in CS from Guru Nanak Dev University. </p><br/>
+                        <p class="about__text">I love python, machine learning, video games, and Coldplay. My research interests include Computer Vision and Software Engineering.</p> 
+
                     </div>                                   
                 </div>
             </section>
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title">Professional Skills</h2>
 
                 <div class="skills__container bd-grid">          
                     <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
+                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
+                                <box-icon type='logo' name='python'></box-icon>  
+                                
+                                <span class="skills__name">Python</span>
                             </div>
-                            <div class="skills__bar skills__html">
+                            <div class="skills__bar skills__python">
 
                             </div>
                             <div>
                                 <span class="skills__percentage">95%</span>
                             </div>
                         </div>
+
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
+                                <i class='bx bxl- ' ></i>
+                                <span class="skills__name">HTML/CSS</span>
                             </div>
-                            <div class="skills__bar skills__css">
+                            <div class="skills__bar skills__html">
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">85%</span>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-' ></i>                             
+                                <span class="skills__name">Keras</span>
+                            </div>
+                            <div class="skills__bar skills__keras">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-' ></i>                             
+                                <span class="skills__name">PyTorch</span>
+                            </div>
+                            <div class="skills__bar skills__pytorch">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- ' ></i>
+                                <span class="skills__name">Java</span>
+                            </div>
+                            <div class="skills__bar skills__java">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-' ></i>                             
+                                <span class="skills__name">Asp.net</span>
+                            </div>
+                            <div class="skills__bar skills__asp">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
                             </div>
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">MySQL</span>
                             </div>
-                            <div class="skills__bar skills__js">
+                            <div class="skills__bar skills__sql">
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">65%</span>
+                                <span class="skills__percentage">80%</span>
                             </div>
                         </div>
-                        <div class="skills__data">
+                        
+         
+						
+						<div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Tableau</span>
                             </div>
-                            <div class="skills__bar skills__ux">
-                                
+                            <div class="skills__bar skills__tableau">
+
                             </div>
                             <div>
-                                <span class="skills__percentage">85%</span>
+                                <span class="skills__percentage">90%</span>
                             </div>
                         </div>
+						
+						
                     </div>
                     
                     <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                        <img src="assets/img/code.jpg" alt="" class="skills__img">
                     </div>
                 </div>
             </section>
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
+                <h2 class="section-title">Work Experience</h2>
+                
                 <div class="work__container bd-grid">
-                    <div class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/img/work2.jpg" alt="Security Analyst">
+                        <div class="card-body">
+                          <h5 class="card-title">Security Analyst - EY</h5>
+                          <p class="card-text">Worked in Identity Access Management using Saviynt, part of CyberSecurity, for Ernst & Young.</p>
+                        </div>
                     </div>
-                    <div class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top"src="assets/img/work1.jpg" alt="Data Science Intern">
+                        <div class="card-body">
+                          <h5 class="card-title">Data Science Intern - Blackcoffer</h5>
+                          <p class="card-text">Worked on Data mining, Textual analysis and Payroll analysis using Python, Machine learning and Tableau.  </p>
+                        </div>
                     </div>
-                    <div class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
+                    
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top"src="assets/img/work3.jpg" alt="Research Assistant">
+                        <div class="card-body">
+                          <h5 class="card-title">Research Assistant - Guru Nanak Dev University</h5>
+                          <p class="card-text">Used Machine learning, R, Data mining, and Web scraping to conduct research.</p>
+                        </div>
                     </div>
-                    <div class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
+                    
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/img/work5.jpg" alt="Web Development Intern">
+                        <div class="card-body">
+                          <h5 class="card-title">Web Development Intern - Guru Nanak Dev University</h5>
+                          <p class="card-text">Implemented Leave Management System for employees of Guru Nanak DevUniversity in Asp.net.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
+
+            <!--===== SKILLS =====-->
+            <section class="projects" id="projects">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="skills__container bd-grid">   
+                    <div>              
+                        <img src="assets/img/proj.jpg" alt="" class="skills__img">
+                    </div>  
+                    <div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <box-icon type='logo' name='python'></box-icon>  
+                                
+                                <span class="skills__name">Made a project to find correlation between BERT layer features and EEG data.</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Worked on a Level generator for Super Mario Bros using music and a Convolutional Autoencoder.</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Made a website that can detect entity roles in news articles using NLP.</span>
+                            </div>
+                        </div>
+         
+						<div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Created a website and a program using Flask, YOLO, JavaScript and HTML that candetect and read number plates of Indian cars in real-time.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-            </section>
-        </main>
+            </section> 
+            
+
+            
+
+               <!--===== SKILLS =====-->
+               <section class="publication section" id="publications">
+                <h2 class="section-title">Publications</h2>
+
+                <div class="skills__container bd-grid">   
+                         
+                    <div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <box-icon type='logo' name='python'></box-icon>  
+                                
+                                <span class="skills__name">Investigating diversity and impact of the popularity metrics for ranking software packages. (https://doi.org/10.1002/smr.2265)</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name"">Customer reviews as the measure of software quality. (https://doi.org/10.1049/ietsen.2019.0309) </span> 
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Examining the Impact of README File Contents on the Popularity of OSS Project GitHub Repository. (Under Review)</span>
+                            </div>
+                        </div>
+         
+						<div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl- '></i>
+                                <span class="skills__name">Examining the Developer Dynamics and Semantics of Commit Messages of Open-Source Software Project Repositories. (In-preparation)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>              
+                        <img src="assets/img/publ.jpg" alt="" class="skills__img">
+                    </div>  
+                </div>
+            </section> 
+            
+
+
+            
+              
 
         <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <footer class="footer" id="contact">
+            <p class="footer__title">Contact</p>
+                    rverma3@ualberta.ca 
+                    <br/>
+                    +1 7809324161
             </div>
-            <p>&#169; 2020 copyright all right reserved</p>
         </footer>
 
 
         <!--===== SCROLL REVEAL =====-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--===== MAIN JS =====-->

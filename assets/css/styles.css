@@ -27,6 +27,8 @@
   }
 }
 
+
+
 /*===== Margenes =====*/
 :root{
   --mb-1: 0.5rem;
@@ -289,7 +291,25 @@ img{
   z-index: var(--z-back);
 }
 .skills__html{
+  width: 90%;
+}
+.skills__python{
   width: 95%;
+}
+.skills__keras{
+  width: 80%;
+}
+.skills__pytorch{
+  width: 75%;
+}
+.skills__asp{
+  width: 75%;
+}
+.skills__sql{
+  width: 80%;
+}
+.skills__java{
+  width: 70%;
 }
 .skills__css{
   width: 85%;
@@ -297,8 +317,8 @@ img{
 .skills__js{
   width: 65%;
 }
-.skills__ux{
-  width: 85%;
+.skills__tableau{
+  width: 90%;
 }
 .skills__img{
   border-radius: .5rem;
@@ -448,3 +468,5 @@ img{
     right: 10%;
   }
 }
+
+
