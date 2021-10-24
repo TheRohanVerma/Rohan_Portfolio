@@ -246,7 +246,7 @@ img{
   justify-self: center;
 }
 .about__img img{
-  width: 200px;
+  width: 1000px;
   border-radius: .5rem;
 }
 
@@ -438,13 +438,28 @@ img{
     bottom: 15%;
   }
 
-  .about__container, .skills__container{
+  .skills__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
   }
   .about__img img{
     width: 300px;
+  }
+  .about__text_1{
+    margin-left:auto; margin-right:auto;
+  text-align:justify;
+
+  
+    }
+
+  .about__text{
+	margin-left:auto; margin-right:auto;
+text-align:justify;
+display: list-item;          /* This has to be "list-item"                                               */
+    list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+    list-style-position: inside; 
+
   }
   .work__container{
     grid-template-columns: repeat(3, 1fr);
