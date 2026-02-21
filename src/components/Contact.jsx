@@ -46,7 +46,9 @@ const Contact = () => {
                         </div>
                         <div>
                             <p className="text-sm text-slate-gray font-medium uppercase tracking-widest mb-1">Location</p>
-                            <p className="text-lg text-white font-semibold">Edmonton, Alberta, CA</p>
+                            <p className="text-lg text-white font-semibold flex items-center gap-2">
+                                Calgary, Canada <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full font-normal">Remote Ready</span>
+                            </p>
                         </div>
                     </div>
                 </motion.div>
