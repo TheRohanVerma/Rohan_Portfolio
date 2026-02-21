@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import MouseTooltip from './MouseTooltip';
 
 const Contact = () => {
     return (
@@ -15,25 +16,29 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="space-y-8"
                 >
-                    <div className="flex items-center gap-6 group">
-                        <div className="bg-primary/10 p-4 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                            <Mail size={24} />
+                    <MouseTooltip text="Click to email rv.97ad@gmail.com">
+                        <div className="flex items-center gap-6 group cursor-pointer" onClick={() => window.location.href = 'mailto:rv.97ad@gmail.com'}>
+                            <div className="bg-primary/10 p-4 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <Mail size={24} />
+                            </div>
+                            <div>
+                                <p className="text-sm text-slate-gray font-medium uppercase tracking-widest mb-1">Email</p>
+                                <p className="text-lg text-white font-semibold">rv.97ad@gmail.com</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-sm text-slate-gray font-medium uppercase tracking-widest mb-1">Email</p>
-                            <p className="text-lg text-white font-semibold">rv.97ad@gmail.com</p>
-                        </div>
-                    </div>
+                    </MouseTooltip>
 
-                    <div className="flex items-center gap-6 group">
-                        <div className="bg-primary/10 p-4 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                            <Phone size={24} />
+                    <MouseTooltip text="+1 (780) 932-4161">
+                        <div className="flex items-center gap-6 group cursor-pointer">
+                            <div className="bg-primary/10 p-4 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <Phone size={24} />
+                            </div>
+                            <div>
+                                <p className="text-sm text-slate-gray font-medium uppercase tracking-widest mb-1">Phone</p>
+                                <p className="text-lg text-white font-semibold">+1 (780) 932-4161</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-sm text-slate-gray font-medium uppercase tracking-widest mb-1">Phone</p>
-                            <p className="text-lg text-white font-semibold">+1 (780) 932-4161</p>
-                        </div>
-                    </div>
+                    </MouseTooltip>
 
                     <div className="flex items-center gap-6 group">
                         <div className="bg-primary/10 p-4 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-all">
