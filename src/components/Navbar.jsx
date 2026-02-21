@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
                 <a href="#home" className="flex items-center gap-2 group">
                     <img
-                        src="/Rohan_Portfolio/profile.png"
+                        src="/Rohan_Portfolio/profile.jpg"
                         alt="Rohan Verma"
                         className="w-9 h-9 rounded-full object-cover border-2 border-primary/40 group-hover:border-primary transition-colors shadow-md"
                     />
