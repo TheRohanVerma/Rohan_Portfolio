@@ -33,15 +33,17 @@ const Hero = () => {
                     Data Scientist with 5+ years of experience | Delivering production-grade AI/ML & GenAI solutions | M.Sc CS @ University of Alberta.
                 </p>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
                     <MouseTooltip text="rv.97ad@gmail.com">
                         <a href="mailto:rv.97ad@gmail.com" className="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 shadow-lg shadow-primary/25">
                             Get in Touch
                         </a>
                     </MouseTooltip>
-                    <a href="#work" className="bg-white/5 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold transition-all border border-white/10">
-                        View My Work
-                    </a>
+                    <MouseTooltip text="Explore my projects">
+                        <a href="#work" className="bg-white/5 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold transition-all border border-white/10">
+                            View My Work
+                        </a>
+                    </MouseTooltip>
                 </div>
 
                 <div className="flex justify-center gap-6 text-2xl">
