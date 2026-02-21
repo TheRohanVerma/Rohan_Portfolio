@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4070F4;
+  --color-background-deep: #0e2431;
+  --color-background-obsidian: #050a0e;
+  --color-accent: #00d2ff;
+  --color-slate-gray: #92a1b0;
+}
+
+@layer base {
+  body {
+    @apply bg-background-obsidian text-white font-sans selection:bg-primary/30;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
