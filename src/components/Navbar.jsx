@@ -28,8 +28,15 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background-obsidian/80 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
             <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-                <a href="#home" className="text-2xl font-bold text-white tracking-tighter hover:text-primary transition-colors">
-                    RV<span className="text-primary">.</span>
+                <a href="#home" className="flex items-center gap-2 group">
+                    <img
+                        src="/Rohan_Portfolio/profile.png"
+                        alt="Rohan Verma"
+                        className="w-9 h-9 rounded-full object-cover border-2 border-primary/40 group-hover:border-primary transition-colors shadow-md"
+                    />
+                    <span className="text-2xl font-bold text-white tracking-tighter hover:text-primary transition-colors">
+                        RV<span className="text-primary">.</span>
+                    </span>
                 </a>
 
                 {/* Desktop Links */}
