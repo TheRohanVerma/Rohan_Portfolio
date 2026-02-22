@@ -6,6 +6,7 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPhotoZoomed, setIsPhotoZoomed] = useState(false);
+    const [clickOrigin, setClickOrigin] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,7 +35,12 @@ const Navbar = () => {
                         <motion.img
                             src="/Rohan_Portfolio/profile.jpg"
                             alt="Rohan Verma"
-                            onClick={(e) => { e.preventDefault(); setIsPhotoZoomed(true); }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const rect = e.currentTarget.getBoundingClientRect();
+                                setClickOrigin({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
+                                setIsPhotoZoomed(true);
+                            }}
                             className="w-9 h-9 rounded-full object-cover object-top border-2 border-primary/40 group-hover:border-primary transition-colors shadow-md cursor-pointer"
                             whileHover={{ scale: 1.1 }}
                             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -112,13 +118,19 @@ const Navbar = () => {
                             exit={{ opacity: 0 }}
                         />
 
-                        {/* Zoomed image */}
+                        {/* Zoomed image — positioned so its center is the click origin */}
                         <motion.div
-                            className="relative z-10 ml-6 mt-4 pointer-events-auto"
+                            className="relative z-10 pointer-events-auto"
+                            style={{
+                                position: 'fixed',
+                                left: clickOrigin.x - 104,
+                                top: clickOrigin.y - 104,
+                                transformOrigin: 'center center',
+                            }}
                             onMouseLeave={() => setIsPhotoZoomed(false)}
-                            initial={{ scale: 0.2, x: 0, y: 0, originX: 0, originY: 0 }}
-                            animate={{ scale: 1, x: 0, y: 0 }}
-                            exit={{ scale: 0.2, x: 0, y: 0 }}
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0, opacity: 0 }}
                             transition={{ type: 'spring', stiffness: 280, damping: 24 }}
                         >
                             <div className="relative">
