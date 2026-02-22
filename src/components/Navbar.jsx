@@ -38,7 +38,7 @@ const Navbar = () => {
                             onClick={(e) => {
                                 e.preventDefault();
                                 const rect = e.currentTarget.getBoundingClientRect();
-                                setClickOrigin({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
+                                setClickOrigin({ x: rect.left, y: rect.bottom + 8 });
                                 setIsPhotoZoomed(true);
                             }}
                             className="w-9 h-9 rounded-full object-cover object-top border-2 border-primary/40 group-hover:border-primary transition-colors shadow-md cursor-pointer"
@@ -118,14 +118,14 @@ const Navbar = () => {
                             exit={{ opacity: 0 }}
                         />
 
-                        {/* Zoomed image — positioned so its center is the click origin */}
+                        {/* Zoomed image — anchored at photo's position, grows downward/rightward */}
                         <motion.div
                             className="relative z-10 pointer-events-auto"
                             style={{
                                 position: 'fixed',
-                                left: clickOrigin.x - 104,
-                                top: clickOrigin.y - 104,
-                                transformOrigin: 'center center',
+                                left: clickOrigin.x,
+                                top: clickOrigin.y,
+                                transformOrigin: 'top left',
                             }}
                             onMouseLeave={() => setIsPhotoZoomed(false)}
                             initial={{ scale: 0, opacity: 0 }}
