@@ -34,7 +34,7 @@ const About = () => {
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-20" />
                     <h3 className="text-2xl font-bold mb-6 text-white">Research Interests</h3>
                     <ul className="space-y-4">
-                        {['Computer Vision', 'Software Engineering', 'Deep Learning', 'Data Analysis'].map((skill) => (
+                        {['Generative AI', 'Computer Vision', 'Software Engineering', 'Deep Learning', 'Data Analysis'].map((skill) => (
                             <li key={skill} className="flex items-center gap-3">
                                 <div className="w-2 h-2 rounded-full bg-primary" />
                                 <span className="text-slate-gray">{skill}</span>
