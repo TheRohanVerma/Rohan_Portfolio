@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, ChevronDown, Copy, Check, ExternalLink } from 'lucide-react';
 import MouseTooltip from './MouseTooltip';
@@ -6,6 +6,28 @@ import MouseTooltip from './MouseTooltip';
 const Hero = () => {
     const [activeContact, setActiveContact] = useState(null);
     const [copied, setCopied] = useState(null);
+    const [isHoveringCorner, setIsHoveringCorner] = useState(false);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            const percX = x / width;
+            const percY = y / height;
+
+            // Upper right (x > 70%, y < 30%) or Lower left (x < 30%, y > 70%)
+            const isUpperRight = percX > 0.7 && percY < 0.3;
+            const isLowerLeft = percX < 0.3 && percY > 0.7;
+
+            setIsHoveringCorner(isUpperRight || isLowerLeft);
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     const contactMethods = {
         github: {
@@ -38,8 +60,8 @@ const Hero = () => {
     return (
         <section id="home" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-4">
             {/* Decorative Background Elements */}
-            <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className={`absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full blur-[120px] pointer-events-none transition-colors duration-1000 ease-in-out ${isHoveringCorner ? 'bg-red-500/30' : 'bg-primary/20'}`} />
+            <div className={`absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none transition-colors duration-1000 ease-in-out ${isHoveringCorner ? 'bg-red-600/20' : 'bg-accent/10'}`} />
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
