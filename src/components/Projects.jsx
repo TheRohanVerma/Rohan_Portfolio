@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
-import { ExternalLink, Code, Sparkles, Coffee } from 'lucide-react';
+import { Code, Sparkles, Coffee } from 'lucide-react';
 
 const projects = [
     {
@@ -109,13 +109,6 @@ const Projects = () => {
                         <div className="p-6 flex-1 flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{proj.title}</h3>
-                                {proj.link ? (
-                                    <a href={proj.link} target="_blank" rel="noreferrer" className="block p-1 transform hover:scale-110 transition-transform">
-                                        <ExternalLink size={18} className="text-primary hover:text-white drop-shadow-[0_0_8px_rgba(var(--color-primary),0.8)]" />
-                                    </a>
-                                ) : (
-                                    <ExternalLink size={18} className="text-slate-gray/30" />
-                                )}
                             </div>
                             <p className="text-slate-gray text-sm mb-6 leading-relaxed flex-1">
                                 {proj.desc}
