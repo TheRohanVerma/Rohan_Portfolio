@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
-import { ExternalLink, Code, Sparkles } from 'lucide-react';
+import { ExternalLink, Code, Sparkles, Coffee } from 'lucide-react';
 
 const projects = [
     {
@@ -52,6 +52,31 @@ const Projects = () => {
     return (
         <section id="projects" className="py-24 px-4 max-w-6xl mx-auto">
             <SectionHeader title="Key Projects" />
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16 glass p-8 rounded-2xl border border-primary/20 bg-primary/5 flex flex-col md:flex-row items-center gap-8 justify-between"
+            >
+                <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">Portfolio & Client Work</h3>
+                    <p className="text-slate-gray leading-relaxed">
+                        Most of my projects and client work are non-public due to confidentiality agreements and other reasons. However, I am always happy to discuss my work, past experiences, and how I can deliver value to your team over a chat!
+                    </p>
+                </div>
+                <div className="shrink-0 w-full md:w-auto">
+                    <a
+                        href="mailto:rv.97ad@gmail.com?subject=Coffee%20Chat"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/80 text-white font-bold py-3 px-6 rounded-xl transition-all group"
+                    >
+                        <Coffee size={18} className="group-hover:rotate-12 transition-transform" />
+                        Book a Coffee Chat
+                    </a>
+                </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((proj, index) => (
